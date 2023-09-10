@@ -1,23 +1,21 @@
 #include <stdio.h>
 
 /**
- * main -Entry point
+ * main - Entry point
  *
  * Descrition: print all single digit numbers
  *
- * Retun: Always 0 (success)
+ * Return: Always 0 (success)
 */
-
 int main(void)
 {
-	int digit = 0;
+	int n;
 
-	while (digit <= 9)
+	for (n = 0; n <= 9; n++)
 	{
-		printf("%i", digit);
-		digit++;
+		printf("%d", n);
 	}
-	printf("\n");
+	print("\n");
 
 	return (0);
 }
