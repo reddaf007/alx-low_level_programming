@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main -Entry point
  *
- * Description: A C program that prints with printf funtion.
+ * Descrition: print proper grammar
  *
  * Return: Always 0 (success)
 */
