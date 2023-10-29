@@ -1,2 +1,0 @@
-ALX - ARGV and ARGC
-Ax0A
