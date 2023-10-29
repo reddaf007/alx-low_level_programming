@@ -1,32 +1,24 @@
 #include "main.h"
 
 /**
-* _strstr - Function locate
-* @haystack: Pointer to char
-* @needle: Pointer to char
-* Return: 0
-*/
-
+ * _strstr - fills memory with a constant byte.
+ * @haystack: first bytes of the memory
+ * @needle: constant byte b
+ * Return: pointer to the resulting string dests
+ */
 char *_strstr(char *haystack, char *needle)
 {
-	char *result = haystack, *fneedle = needle;
+	int i, j;
 
-	while (*haystack)
+	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		while (*needle)
+		for (j = 0; needle[j] != '\0'; j++)
 		{
-			if (*haystack++ != *needle++)
-			{
+			if (haystack[i + j] != needle[j])
 				break;
-			}
 		}
-		if (!*needle)
-		{
-			return (result);
-		}
-		needle = fneedle;
-		result++;
-		haystack = result;
+		if (needle[j] == '\0')
+			return (haystack + i);
 	}
-	return (0);
+	return (NULL);
 }

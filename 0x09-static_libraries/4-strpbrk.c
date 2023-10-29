@@ -1,27 +1,24 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * _strpbrk - Bytes
- * @s: Pointer to char
- * @accept: Pointer to char
- * Return: NULL
+ * _strpbrk - fills memory with a constant byte.
+ * @s: first bytes of the memory
+ * @accept: constant byte b
+ * Return: pointer to the resulting string dests
  */
-
 char *_strpbrk(char *s, char *accept)
 {
-	int i;
+	int i, j;
 
-	while (*s)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (i = 0; accept[i]; i++)
+		for (j = 0; accept[j] != '\0'; j++)
 		{
-			if (*s == accept[i])
+			if (s[i] == accept[j])
 			{
-				return (s);
+				return (s + i);
 			}
 		}
-		s++;
 	}
-	return (NULL);
+	return ('\0');
 }
