@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strstr - fills memory with a constant byte.
+  _strstr - fills memory with a constant byte.
  * @haystack: first bytes of the memory
  * @needle: constant byte b
  * Return: pointer to the resulting string dests
